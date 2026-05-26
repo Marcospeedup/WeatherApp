@@ -1,0 +1,31 @@
+/* hidden initially */
+.weather-card {
+  width: 22rem;
+  margin-top: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+/* fade-in animation trigger */
+.weather-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* icon animation */
+.weather-icon {
+  width: 100px;
+  margin: 10px 0;
+}
+
+/* bounce animation when updated */
+.bounce {
+  animation: bounce 0.6s ease;
+}
+
+@keyframes bounce {
+  0%   { transform: scale(0.8) translateY(0); }
+  50%  { transform: scale(1.1) translateY(-10px); }
+  100% { transform: scale(1) translateY(0); }
+}
